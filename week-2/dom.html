@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulating the DOM</title>
+</head>
+<body>
+  <p id="demo">New paragraph</p>
+  <h2>Wow</h2>
+  <h2>Right</h2>
+  <h2>Follow up</h2>
+  <h3>New headers</h3>
+  <h3>Ring road</h3>
+  <p>Check this new arrangement out!</p>
+  <script>
+    document.getElementById('demo').innerHTML = "Hello World";
+    document.getElementsByTagName('h2').innerHTML = "New text";
+  </script>
+</body>
+</html>

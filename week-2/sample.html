@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="first">First paragraph</p>
+  <p>Second paragraph</p>
+  <p>Third paragraph</p>
+  <h2 class="different">This is a h2 tag</h2>
+  <p>Fourth paragraph</p>
+  <h3 class="different">This a h3 tag</h3>
+
+
+  <script>
+    //Save element(s) into a variable
+    let elements = document.getElementsByTagName('p');
+    let otherElements = document.getElementsByClassName('different');
+    
+    //Make all 'p' elements blue
+    for (let count = 0; count <= elements.length - 1; count++) {
+      elements[count].style.color = 'blue';
+    }
+
+    for (let count = 0; count <= otherElements.length - 1; count++) {
+      otherElements[count].style.color = 'green';
+    }
+  </script>
+</body>
+</html>
