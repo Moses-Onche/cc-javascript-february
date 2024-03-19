@@ -1,13 +1,12 @@
-let container = document.getElementById('container');
-let animText = container.children[0];
+let container = document.getElementById('new-container');
+let newAnimText = container.children;
 
-console.log(animText.innerHTML);
+console.log(newAnimText.keys);
 
-// let count = 0;
-// function easeUp(){
-//   animText.innerText[count].style.animation = 'ease-up 1.5s';
-// }
-
-// for (; count <= animText.length - 1; count++) {
-//   setInterval(easeUp(), 1500);
+// function moveUp(){
+//   let count = 0;
+//   while (count < newAnimText.length - 1) {
+//     return newAnimText[count];
+//     count++;
+//   } 
 // }

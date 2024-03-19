@@ -11,6 +11,7 @@
   overflow: hidden;
   margin-left: 38px;
 }
+
 #anim {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 80px;
@@ -18,12 +19,20 @@
   animation: move 1.5s infinite;
 }
 
+#new-container {
+  margin-top: 20px;
+  height: 100px;
+  margin-left: 38px;
+  /* overflow: hidden; */
+}
+
 .new {
+  display: inline-block;
+  margin-top: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 80px;
+  font-size: 75px;
   font-weight: 700;
-  margin-top: 100px;
-  animation: move 1.5s infinite;
+  animation: none;
 }
 
 @keyframes move {
