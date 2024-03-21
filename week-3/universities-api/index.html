@@ -9,14 +9,16 @@
 <body>
   <div id="main-div">
     <h4 id="greeting">Type in the name of the school:</h4>
-    <form action="get">
-      <input type="text">
-      <button>Search</button>
+    <form method="get" name="school-search">
+      <input type="text" name="input">
+      <button id="button">Search</button>
     </form>
 
     <div id="card">
       <h3 style="margin-bottom: 30px;">Name:</h3>
-      <h3>Official Site: <a href="https://www.google.com" target="_blank"></a></h3>
+      <h3>Official Site: 
+        <a href="www.google.com" target="_blank">Google</a>
+      </h3>
     </div>
   </div>
   <script src="script.js"></script>
