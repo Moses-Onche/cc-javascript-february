@@ -3,24 +3,37 @@
   let url = "http://universities.hipolabs.com/search?country=Nigeria";
   let response = await fetch(url);
   let uniList = await response.json();
-  
-  // Test api json output
-  // console.log(uniList[5]);
-  // console.log(uniList[5].domains[0]);
 
   // Target corresponding HTML elements
   let cardBox = document.getElementById('card');
   let schoolName = cardBox.children[0];
   let officialSite = cardBox.children[1];
-  let userInput = document.forms['school-search']['input'].value;
-  console.log(userInput);
-  let button = document.getElementById('button');
-
-
-  //Add API information to HTML elements
-  let index = 7;
-  schoolName.innerHTML += " " + uniList[index].name
   let hyperLink = officialSite.children[0];
-  hyperLink.setAttribute("href", `${"https://" + uniList[index].domains[0]}`)
-  hyperLink.innerHTML = uniList[index].domains[0];
+
+  // Collect input from user using form
+  let userInput = "";
+  let form = document.getElementById('input-field')
+
+  // Use button to collect input when the user clicks it.
+  let button = document.getElementById('button');
+    button.addEventListener('click', () => {
+      userInput += form.elements[0].value;
+
+      let inputEx = new RegExp(userInput, "i");
+      // console.log(uniList[12].name.search(inputEx));
+      
+      for (let count = 0; count < uniList.length - 1; count++){
+
+        if (uniList[count].name.search(inputEx) != -1) {
+          
+          schoolName.innerHTML += " " + uniList[count].name;
+          hyperLink.setAttribute("href", `${"https://" + uniList[count].domains[0]}`)
+          hyperLink.innerHTML = uniList[count].domains[0];
+          break;
+        }
+      }
+    })
 })();
+
+
+
